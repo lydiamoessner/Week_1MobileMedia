@@ -1,0 +1,102 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: rgb(70,70,85);
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+}
+.nav ul {
+    position: absolute;
+    margin-top: -55px;
+    margin-left: 160px;
+}
+
+.nav li{
+    list-style-type: none;
+    padding: 0;
+    width: 100px;
+    display: inline-block;
+}
+.box{
+	margin-top: 75px;
+	background-color: red;
+	text-align: center;
+	margin-left: 200px;
+    margin-right: 200px;
+	height: 200px;
+    padding-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 900px;
+    color: black;
+}
+
+.nav select {
+  display: none;
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 25px;
+}
+
+@media(max-width: 960px) {
+    /*
+        This checks the viewport width, and if it is less than the max specified (850px here), the contained style rules are applied.
+        This width (here, 850px), is called a breakpoint. You can define multiple breakpoints, but usually you won't need to thing about more than 3 sizes - mobile, tablet, and desktop. If you work efficiently and design carefully, one breakpoint may be enough.
+
+        The C in CSS means cascading - all of the styles above flow on throughout, so you only need to state the styles you want to change - everything else will stay the same.
+        Therefore, start with specifying basic values that will always apply, and then add specific variations inside media queries ("@media(){}").
+    */
+
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        background-color: rgba(240,240,240,0.85);
+        border-bottom: solid 1px rgba(180,180,180,0.25);
+    }
+
+    header h3 {
+        line-height: 0.5rem;
+        color: rgba(50,50,50,0.75);
+    }
+
+    .box{
+	   margin-top: 75px;
+	   background-color: grey;
+	   text-align: center;
+	   margin-left: center;
+	   width: 200px;
+       padding-top: 20px;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .nav li {
+        display: block;
+        } 
+    }
+@media screen and (max-width: 480px) {
+	.box{
+	   margin-top: 75px;
+	   background-color: red;
+	   text-align: center;
+	   margin-left: 155px;
+	   width: 60px;
+	   height: 60px;
+	   font-size: 5px;
+       padding: 1px;
+	}
+
+    .nav ul     { display: none; }
+    .nav select { 
+        display: inline-block;
+        margin-left: 150px;
+     }
+}
